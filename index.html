@@ -8,49 +8,114 @@
       <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="sizes()">
 
       <header class="header container-fluid">
             <div class="header--center">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
-                  </svg>
+                  <div class="header--svg" onclick="nav(x++)"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                        </svg>
+                  </div>
                   <p class="container">Lois</p>
             </div>
       </header>
 
       <main class="main">
-            <nav class="nav"></nav>
-
             <content class="main--wrapper">
-                  <content class="main--content">
-                        <div class="logo--block">
-                              <div class="logo">
-                                    <img src="logo.png" alt="logo" class="logo--img">
+
+                  <nav class="nav" id="nav">
+                        <div id="nav-content">
+                              <div class="top--els">
+                                    <div class="logo">
+                                          <img src="logo.png" alt="logo" class="logo--img" style="height: 138.46px;width: 100px;">
+                                    </div>
+                                    <ul class="nav--container">
+                                          <a href="Blog.html" style="color: #000">
+                                                <li class="nav--element">
+                                                      <div class="nav--element--logo or">
+                                                            <svg stroke-width="0" viewBox="0 0 448 512" height="1.4rem" width="1.4rem" xmlns="http://www.w3.org/2000/svg">
+                                                                  <path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path>
+                                                            </svg>
+                                                      </div>
+                                                      <p class="nav--element--text">Blog</p>
+                                                </li>
+                                          </a>
+                                          <br>
+                                          <a href="set.html" style="color: #000">
+                                                <li class="nav--element">
+                                                      <div class="nav--element--logo or">
+                                                            <svg stroke-width="0" viewBox="0 0 512 512" height="1.4rem" width="1.4rem" xmlns="http://www.w3.org/2000/svg">
+                                                                  <path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path>
+                                                            </svg>
+                                                      </div>
+                                                      <p class="nav--element--text">Settings</p>
+                                                </li>
+                                          </a>
+                                          <br>
+
+                                          <a href="cont.html" style="color: #000">
+                                                <li class="nav--element">
+                                                      <div class="nav--element--logo or">
+                                                            <svg stroke-width="0" viewBox="0 0 576 512" height="1.4rem" width="1.4rem" xmlns="http://www.w3.org/2000/svg">
+                                                                  <path d="M528 32H48C21.5 32 0 53.5 0 80v16h576V80c0-26.5-21.5-48-48-48zM0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V128H0v304zm352-232c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zM176 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zM67.1 396.2C75.5 370.5 99.6 352 128 352h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.9-5.2 19.8-15.6 19.8H82.7c-10.4 0-18.8-10-15.6-19.8z"></path>
+                                                            </svg>
+                                                      </div>
+                                                      <p class="nav--element--text">Contacts</p>
+                                                </li>
+                                          </a>
+                                    </ul>
                               </div>
-                              <div class="main--text">Get free likes, followers for Instagram and get members, views for Telegram channels or supergroups
-                              </div>
-                              <div class="telegram--button" id="tel-but" onmouseover="telanim()" onmouseout="telanimb()">
-                                    <img src="Telegram_logo.png" alt="Telegram_logo" class="telegram--logo" id="tel-logo">
-                                    <div class="main--text--light" id="tel-text">Auth with Telegram</div>
+
+                              <div class="bottom-els">
+                                    <div class="lang">
+                                          <div class="lang--el btn">English</div>
+                                          <div class="lang--el btn">Russian</div>
+                                    </div>
+
+                                    <footer class="nav--footer">
+                                          © <a href="corp.html">Lois Inc.</a> 2019. <a href="priv">Privacy Policy</a> <br> Mars, Olympus Mons, 18.65°N 226.2°E
+                                    </footer>
                               </div>
                         </div>
+                  </nav>
 
-                        <div class="about">
+
+                  <content class="main--content">
+                        <div class="cont"  id="lb">
+                              <container class="logo--block">
+                                    <div class="logo">
+                                          <img src="logo.png" alt="logo" class="logo--img">
+                                    </div>
+                                    <div class="main--text">Get free likes, followers for Instagram and get members, views for Telegram channels or supergroups
+                                    </div>
+                                    <div class="telegram--button" id="tel-but" onmouseover="telanim()" onmouseout="telanimb()">
+                                          <img src="Telegram_logo.png" alt="Telegram_logo" class="telegram--logo" id="tel-logo">
+                                          <div class="main--text--light" id="tel-text">Auth with Telegram</div>
+                                    </div>
+                             </container>
+                        </div>
+
+                        <div class="about" id="ab">
                               <div class="selection1">
                                     <div class="about--title">Что такое Лоис?</div>
                                     <div class="about--text">Это простое и удобное приложение, которое позволит вам бесплатно получать подписчиков и просмотры каналов Telegram, участников супергрупп; получайте лайки и подписчиков для Instagram.</div>
                                     <div class="about--icons">
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path>
+                                                </svg>
                                                 <div about--icons--text>Friendly community</div>
                                           </div>
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z"></path>
+                                                </svg>
                                                 <div about--icons--text>No bots</div>
                                           </div>
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM48 132.22c20.12 5.04 41.12 7.57 62.72 8.93C104.84 170.54 79 192.69 48 192.69v-60.47zm0 285v-47.78c34.37 0 62.18 27.27 63.71 61.4-22.53-1.81-43.59-6.31-63.71-13.62zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 27.78c-17.52-4.39-35.71-6.85-54.32-8.44 5.87-26.08 27.5-45.88 54.32-49.28v57.72zm0-236.11c-30.89-3.91-54.86-29.7-55.81-61.55 19.54 2.17 38.09 6.23 55.81 12.66v48.89z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM48 132.22c20.12 5.04 41.12 7.57 62.72 8.93C104.84 170.54 79 192.69 48 192.69v-60.47zm0 285v-47.78c34.37 0 62.18 27.27 63.71 61.4-22.53-1.81-43.59-6.31-63.71-13.62zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 27.78c-17.52-4.39-35.71-6.85-54.32-8.44 5.87-26.08 27.5-45.88 54.32-49.28v57.72zm0-236.11c-30.89-3.91-54.86-29.7-55.81-61.55 19.54 2.17 38.09 6.23 55.81 12.66v48.89z"></path>
+                                                </svg>
                                                 <div about--icons--text>Absolutely free</div>
                                           </div>
                                     </div>
@@ -60,18 +125,61 @@
                                     <div class="about--text">Lois - самый безопасный в мире сервис для получения бесплатных подписчиков, лайков и просмотров. Мы не храним ваши пароли и токены социальных сетей и не используем грязные методы для получения результата.</div>
                                     <div class="about--icons">
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>
+                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path>
+                                                </svg>
                                                 <div about--icons--text>High security</div>
                                           </div>
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"></path></svg>
+                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"></path>
+                                                </svg>
                                                 <div about--icons--text>Simple interface</div>
                                           </div>
                                           <div class="about--icons--el">
-                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M288 32C128.94 32 0 160.94 0 320c0 52.8 14.25 102.26 39.06 144.8 5.61 9.62 16.3 15.2 27.44 15.2h443c11.14 0 21.83-5.58 27.44-15.2C561.75 422.26 576 372.8 576 320c0-159.06-128.94-288-288-288zm0 64c14.71 0 26.58 10.13 30.32 23.65-1.11 2.26-2.64 4.23-3.45 6.67l-9.22 27.67c-5.13 3.49-10.97 6.01-17.64 6.01-17.67 0-32-14.33-32-32S270.33 96 288 96zM96 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm48-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm246.77-72.41l-61.33 184C343.13 347.33 352 364.54 352 384c0 11.72-3.38 22.55-8.88 32H232.88c-5.5-9.45-8.88-20.28-8.88-32 0-33.94 26.5-61.43 59.9-63.59l61.34-184.01c4.17-12.56 17.73-19.45 30.36-15.17 12.57 4.19 19.35 17.79 15.17 30.36zm14.66 57.2l15.52-46.55c3.47-1.29 7.13-2.23 11.05-2.23 17.67 0 32 14.33 32 32s-14.33 32-32 32c-11.38-.01-20.89-6.28-26.57-15.22zM480 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>
+                                                <svg stroke="currentColor" fill="#ff7c00" stroke-width="0" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M288 32C128.94 32 0 160.94 0 320c0 52.8 14.25 102.26 39.06 144.8 5.61 9.62 16.3 15.2 27.44 15.2h443c11.14 0 21.83-5.58 27.44-15.2C561.75 422.26 576 372.8 576 320c0-159.06-128.94-288-288-288zm0 64c14.71 0 26.58 10.13 30.32 23.65-1.11 2.26-2.64 4.23-3.45 6.67l-9.22 27.67c-5.13 3.49-10.97 6.01-17.64 6.01-17.67 0-32-14.33-32-32S270.33 96 288 96zM96 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm48-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm246.77-72.41l-61.33 184C343.13 347.33 352 364.54 352 384c0 11.72-3.38 22.55-8.88 32H232.88c-5.5-9.45-8.88-20.28-8.88-32 0-33.94 26.5-61.43 59.9-63.59l61.34-184.01c4.17-12.56 17.73-19.45 30.36-15.17 12.57 4.19 19.35 17.79 15.17 30.36zm14.66 57.2l15.52-46.55c3.47-1.29 7.13-2.23 11.05-2.23 17.67 0 32 14.33 32 32s-14.33 32-32 32c-11.38-.01-20.89-6.28-26.57-15.22zM480 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path>
+                                                </svg>
                                                 <div about--icons--text>Quick result</div>
                                           </div>
                                     </div>
+                              </div>
+                        </div>
+
+                        <div class="functions" id="f">
+                              <div class="functions--selection functions--selection--inst">
+                                    <div class="functions--selection--svg or">
+                                          <svg stroke="currentColor" stroke-width="0" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                          </svg>
+                                    </div>
+                                    <div class="functions--selection--texts">
+                                          <div class="functions--selection--texts">
+                                                <div class="functions--selection--text--title or">Free followers and likes for Instagram</div>
+                                                <div class="functions--selection--text">Thanks to Lois, getting followers and likes on Instagram for free has become so easy! If you want to become popular with friends, girls, casual visitors, or just want to upgrade your account for future earnings, then you can’t do without Lois!</div>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="functions--selection functions--selection--tel bl">
+                                    <div class="functions--selection--svg"><svg stroke="currentColor" stroke-width="0" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                                          </svg></div>
+                                    <div class="functions--selection--texts">
+                                          <div class="functions--selection--text--title bl">Free views and subscribers for Telegram channel or supergroup</div>
+                                          <div class="functions--selection--text">By creating a Telegram channel, you can make good money. But for advertisers to want to buy ads from you, you have to do two things: get subscribers for your channel, and then get views for each post! Thanks to Lois, this can be done easily and for free. Earn or buy coins, create a task, relax and watch the growth of your channel and increase profits!</div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="footer">
+                              <div class="footer--selection1">
+                                    <a href="#" class="link--title">Blog</a> <br>
+                                    <a href="#" class="link">How to add lois-bot to telegram channel?</a><br>
+                                    <a href="#" class="link">Welcome to Lois!</a>
+                              </div>
+                              <div class="footer--selection2">
+                                    <div class="btn">en</div>
+                                    <div class="btn">ru</div>
                               </div>
                         </div>
                   </content>
@@ -81,6 +189,19 @@
             var tl = document.getElementById("tel-logo");
             var tb = document.getElementById("tel-but");
             var tt = document.getElementById("tel-text");
+            var n = document.getElementById("nav");
+            var nc = document.getElementById("nav-content");
+
+            var ab = document.getElementById("ab");
+            var lb = document.getElementById("lb");
+            var f = document.getElementById("f");
+
+            var x = 0;
+            if(document.documentElement.clientHeight > document.documentElement.clientWidth){
+                  x=0;
+                  nav(x);
+                  x++;
+            }
 
             function telanim() {
                   tl.style.position = "relative";
@@ -97,6 +218,29 @@
                   tt.style.left = "0px";
                   tb.style.backgroundColor = "#fff";
                   tt.style.color = "#0081c3";
+            }
+
+            function nav(x) {
+                  if (x % 2 == 0) {
+                        n.style.width = "0px";
+                        nc.style.transition = ".001s opacity ease";
+                        nc.style.opacity = 0;
+                  } else {
+                        n.style.width = "16rem";
+                        setTimeout(navOp, 260);
+                  }
+                  console.log(x);
+                  x++;
+            }
+            function navOp(){
+                  nc.style.transition = ".4s opacity ease";
+                  nc.style.opacity = 1;
+            }
+
+            function sizes(){
+                  ab.style.height  = document.documentElement.clientHeight;
+                  lb.style.height  = document.documentElement.clientHeight;
+                  f.style.height  = document.documentElement.clientHeight;
             }
       </script>
 </body></html>
